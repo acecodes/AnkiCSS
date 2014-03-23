@@ -11,7 +11,7 @@ the task of editing this stylesheet very managable.
  
  *************************/
 
-/* This sets the base style of the cards, including font size, text alignment and background color. */
+/* This sets the base style of all cards, including font size, text alignment and background color. */
  
  .card {
  font-family: Calibri;
@@ -49,6 +49,7 @@ h2 { font-size:29px;}
 h3 { font-size:23px;}
 h4 { font-size:15px;}
 
+/* Styles for various text sizes */
 p {
 padding:0px 45px 0px 45px;
 margin:0px 0px 0px 0px;
@@ -56,20 +57,22 @@ margin:0px 0px 0px 0px;
 
 p.big {
 font-weight:bold;
-font-size:30px;
+font-size:25px;
 }
 
 p.huge {
-font-size:65px;
+font-size:40px;
 }
 
 p.massive {
-font-size:85px;
+font-size:65px;
 }
 
 p.notes {
 font-style:italic;
 }
+
+/* Styling for Wikipedia and reference links at the bottom of each card */
 
 p.wiki {
 font-size:12px;
@@ -129,8 +132,6 @@ display:inherit;
 clear:both;
 }
 
-
-
 box.small {
 margin:1px 0px 0px 0px;
 font-size:18px;
@@ -140,7 +141,7 @@ padding:5px;
 
 box.big {
 margin:1px 0px 0px 0px;
-font-size:28px;
+font-size:23px;
 font-weight:bold;
 padding:10px;
 }
@@ -288,11 +289,15 @@ clear:both;
 background:#fff;
 }
 
+/* For larger images, such as artwork */
+
 images.artwork img{
 max-height:250px;
 max-width:250px;
 border:2px solid lightgrey;
 }
+
+/* For portraits in the "People - Profiles" note type */
 
 images.portraits img {
 max-height:300px;
@@ -300,6 +305,8 @@ max-width:300px;
 padding:1px;
 background:gray;
 }
+
+/* For images with borders (activated by the "Borders?" flag on certain note types) */
 
 images#b1 img {
 border:#A0A0A0 1px solid;
@@ -314,6 +321,8 @@ images#nb img{
 border:0px;
 background:none;
 }
+
+/* Different image sizes */
 
 images.i2 img {
 max-height:220px;
@@ -337,6 +346,8 @@ height:120px;
 width:100px;
 clear:none;
 }
+
+/* Special image size and background classes for foreign language cards. */
 
 images.iv-es img {
 height:120px;
@@ -421,6 +432,7 @@ float:left;
 background:none;
 }
 
+/* For placing additional icons on the right side if I decide I want that */
 /* Added 1/27/2014 */
 
 images.icons-right img {
@@ -432,6 +444,7 @@ margin:-48px 20px 0px 0px;
 float:right;
 background:none; }
 
+/* Boxes for the special foreign language verb note type */
 
 .verb-box {
 border:1px lightgrey solid;
@@ -443,7 +456,7 @@ text-align:center;
 }
 
 
-/* These classes are for boxing in images on my "Phrases" note type. */
+/* These classes are for boxing in images on my "Phrases" foreign language note type. */
 
 .phrase-box {
 border:1px lightgrey solid;
@@ -464,8 +477,10 @@ background:white;
 padding-top:20px;
 }
 
-#es {
 
+/* Special boxes that surround foreign langauge cards with a gradient box that correlates to the color of the origin country's flag French cards have a gradient with blue, white and red, and Spanish cards use a red, gold, red gradient. */
+
+#es {
 /* Background gradient code */
 background: -moz-linear-gradient(left, #ff1a00 0%, #fff200 36%, #fff200 58%, #ff1a00 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff1a00), color-stop(36%,#fff200), color-stop(58%,#fff200), color-stop(100%,#ff1a00)); /* Chrome,Safari4+ */
@@ -480,7 +495,6 @@ text-shadow: 0 0 2px white;
 }
 
 #es-2 {
-
 /* Background gradient code */
 background: -moz-linear-gradient(left, #ff1a00 0%, #fff200 36%, #fff200 58%, #ff1a00 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff1a00), color-stop(36%,#fff200), color-stop(58%,#fff200), color-stop(100%,#ff1a00)); /* Chrome,Safari4+ */
@@ -496,7 +510,6 @@ text-shadow: 0 0 2px white;
 }
 
 #fr {
-
 /* Background gradient code */
 background: #3b679e; /* Old browsers */
 background: -moz-linear-gradient(left, #3b679e 0%, #ffffff 38%, #ffffff 59%, #ff1111 100%); /* FF3.6+ */
@@ -512,7 +525,6 @@ text-shadow: 0 0 2px white;
 }
 
 #fr-2 {
-
 /* Background gradient code */
 background: #3b679e; /* Old browsers */
 background: -moz-linear-gradient(left, #3b679e 0%, #ffffff 38%, #ffffff 59%, #ff1111 100%); /* FF3.6+ */
@@ -529,7 +541,7 @@ text-shadow: 0 0 2px white;
 
 }
 
-/* Header rectangles */
+/* Header rectangles, which sit at the top of every single card */
 
 header {
 background: #000;
@@ -551,7 +563,7 @@ margin-top:5px;
 font-size:25px;
 }
 
-/* Header bars with custom gradient backgrounds */
+/* Header bars with custom foreign flag gradient backgrounds */
 
 #header-espanol {
 /* Background gradient code */
@@ -597,7 +609,8 @@ text-shadow: black 0 1px;
 margin-top:5px;
 }
 
-/*Header color ids for various subjects*/
+/* Header color ids for various subjects, as specified in the "Styling" field on many note types */
+
 #Agriculture{background:#336600}
 #Anatomy {background:#4C9900}
 #Art {background:#660066;}
