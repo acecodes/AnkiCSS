@@ -95,6 +95,11 @@ p.wiki#fra a {
 color:#003366;
 }
 
+p.tex {
+font-family:'Lucida Sans Unicode';
+font-size:25px;
+}
+
 /* Quote styles for the "Quote(s)" cards generated within my "People - Profiles" note type. 11-19-2013 */
 
 .quotes {
