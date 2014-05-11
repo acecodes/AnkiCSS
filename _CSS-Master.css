@@ -95,6 +95,11 @@ p.wiki#fra a {
 color:#003366;
 }
 
+p.tex {
+font-family:'Lucida Sans Unicode';
+font-size:25px;
+}
+
 /* Quote styles for the "Quote(s)" cards generated within my "People - Profiles" note type. 11-19-2013 */
 
 .quotes {
@@ -637,6 +642,7 @@ margin-top:5px;
 #Islam {background:#660066;}
 #Law {background:#000000;}
 #Linguistics {background:#CC0000;}
+#Logic {background:#221079;}
 #Maritime {background:#000099;}
 #Mathematics {background:#221079;}
 #Medicine {background:#221079;}
@@ -654,6 +660,7 @@ margin-top:5px;
 #Psychology {background:#808080;}
 #Religion {background:#660066;}
 #Sales {background:#006600;}
+#Set {background:#221079;}
 #Stupid {background:#808080;}
 #Science {background:#221079;}
 #Sports {background:#006633;}
