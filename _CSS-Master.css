@@ -14,8 +14,8 @@ the task of editing this stylesheet very managable.
 /* This sets the base style of all cards, including font size, text alignment and background color. */
  
  .card {
- font-family: Calibri;
- font-size: 18px;
+ font-family: serif;
+ font-size: 20px;
  text-align: center;
  background-color: #fff;
  background-color: #fff;
