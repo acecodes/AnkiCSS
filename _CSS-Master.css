@@ -15,7 +15,7 @@ the task of editing this stylesheet very managable.
  
  .card {
  font-family: serif;
- font-size: 20px;
+ font-size: 18px;
  text-align: center;
  background-color: #fff;
  background-color: #fff;
@@ -57,7 +57,7 @@ margin:0px 0px 0px 0px;
 
 p.big {
 font-weight:bold;
-font-size:25px;
+font-size:24px;
 }
 
 p.huge {
@@ -163,6 +163,9 @@ box.huge sup { font-size:40px;}
 box a {
 color:white;
 }
+
+/* Time complexity styles */
+box#worst {font-size:40px; color:#FFFFFF; background:#990000;}
 
 /* Box color/text IDs */
 
@@ -286,7 +289,7 @@ height: 1px;
 
 
 images img {
-max-height:250px;
+max-height:270px;
 max-width:300px;
 margin:0px 0px 10px 0px;
 padding:0px;
