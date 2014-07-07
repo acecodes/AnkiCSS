@@ -1,0 +1,629 @@
+ /***************************
+ 
+This style sheet controls all of the various CSS elements within my Anki flashcard note types.  Originally,
+I had segregated this sheet into several separate sheets, but I changed my mind after thinking long
+and hard about it in the shower.  At first the idea horrified me, since the idea of a jumble of code
+all collected into one pile seemed to be a move in the wrong direction, but commenting each section makes
+the task of editing this stylesheet very managable.
+ 
+ ACE
+ 12/11/2012
+ 
+ *************************/
+
+/* This sets the base style of all cards, including font size, text alignment and background color. */
+
+@mixin art {background:#660066;}
+@mixin biology {background:#4C9900;}
+@mixin computing {background:#000000;}
+@mixin geography {background:#0066CC;}
+@mixin money {background:#006600;}
+@mixin science {background:#221079;}
+@mixin society {background:#808080;}
+
+@mixin francais {
+	/* Background gradient code */
+background: #3b679e; /* Old browsers */
+background: -moz-linear-gradient(left, #3b679e 0%, #ffffff 38%, #ffffff 59%, #ff1111 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3b679e), color-stop(38%,#ffffff), color-stop(59%,#ffffff), color-stop(100%,#ff1111)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #3b679e 0%,#ffffff 38%,#ffffff 59%,#ff1111 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #3b679e 0%,#ffffff 38%,#ffffff 59%,#ff1111 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #3b679e 0%,#ffffff 38%,#ffffff 59%,#ff1111 100%); /* IE10+ */
+background: linear-gradient(to right, #3b679e 0%,#ffffff 38%,#ffffff 59%,#ff1111 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#ff1111',GradientType=1 ); /* IE6-9 */
+/* z-index: 100; /* the stack order: foreground */
+}
+
+@mixin espanol { 
+/* Background gradient code */
+background: -moz-linear-gradient(left, #ff1a00 0%, #fff200 36%, #fff200 58%, #ff1a00 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff1a00), color-stop(36%,#fff200), color-stop(58%,#fff200), color-stop(100%,#ff1a00)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #ff1a00 0%,#fff200 36%,#fff200 58%,#ff1a00 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #ff1a00 0%,#fff200 36%,#fff200 58%,#ff1a00 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #ff1a00 0%,#fff200 36%,#fff200 58%,#ff1a00 100%); /* IE10+ */
+background: linear-gradient(to right, #ff1a00 0%,#fff200 36%,#fff200 58%,#ff1a00 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#ff1a00',GradientType=1 ); /* IE6-9 */
+/* z-index: 100; /* the stack order: foreground */
+}
+ 
+ .card {
+ font-family: serif;
+ font-size: 18px;
+ text-align: center;
+ background-color: #fff;
+ background-color: #fff;
+ padding:0px 0px 0px 0px;
+ margin:60px 0px 0px 0px;
+ position:relative;
+ overflow-x:hidden;
+ clear: both;
+}
+
+.card#padded{
+margin: 10px; 
+padding:20px;
+}
+
+ .cloze {
+ font-weight: bold;
+ color: blue;
+}
+
+/* Layout styling */
+
+a {color:#0080FF;}
+
+
+/* Text styling */
+
+/* Base styles for h1, h2, etc. */
+
+h1 { font-size:32px; font-family:sans-serif; }
+h2 { font-size:29px; font-family:sans-serif; }
+h3 { font-size:23px; font-family:sans-serif; }
+h4 { font-size:15px; font-family:sans-serif; }
+
+/* Styles for various text sizes */
+p {
+padding:0px 45px 0px 45px;
+margin:0px 0px 0px 0px;
+}
+
+p.big {
+font-weight:bold;
+font-size:24px;
+}
+
+p.huge {
+font-size:40px;
+}
+
+p.massive {
+font-size:65px;
+}
+
+p.notes {
+font-style:italic;
+}
+
+/* Styling for Wikipedia and reference links at the bottom of each card */
+
+p.wiki {
+font-size:12px;
+margin:10px 0px 10px 0px;
+}
+
+p.wikio {
+font-size:12px;
+margin:10px 0px 10px 0px;
+font-style:italic;
+}
+
+/* Link colors for the hint fields in the "Phrases" note type - 10/23/2013 */
+
+p.wiki#esp a {
+color:#990000;
+}
+
+p.wiki#fra a {
+color:#003366;
+}
+
+p.tex {
+font-family:'Lucida Sans Unicode';
+font-size:25px;
+}
+
+/* Quote styles for the "Quote(s)" cards generated within my "People - Profiles" note type. 11-19-2013 */
+
+.quotes {
+font-style:italic;
+font-size:23px;
+background-color:#C0C0E0;
+padding:0px 20px 0px 20px;
+}
+
+.quotes#right { text-align:right; padding:15px 30px 10px 0px;}
+.quotes#left { text-align:left; padding:20px 10px 10px 30px;}
+
+.quotes#left img{
+max-height:50px;
+max-width:50px;
+}
+
+.quotes#right img{
+max-height:50px;
+max-width:50px;
+}
+
+/* Box styles */
+
+
+/* Colored box classes */
+/* On 10/23/2013 I changed these from div classes (.box) to their own selectors */
+
+box {
+margin:1px 0px 0px 0px;
+font-size:22px;
+font-weight:bold;
+padding:20px;
+display:inherit;
+clear:both;
+font-family:sans-serif;
+}
+
+box.small {
+margin:1px 0px 0px 0px;
+font-size:18px;
+font-weight:bold;
+padding:5px;
+}
+
+box.big {
+margin:1px 0px 0px 0px;
+font-size:23px;
+font-weight:bold;
+padding:10px;
+}
+
+box.huge {
+margin:0px 0px 0px 0px;
+font-size:65px;
+font-weight:bold;
+padding:10px;
+}
+
+box.huge sup { font-size:40px;}
+
+box a {
+color:white;
+}
+
+/* Time complexity styles */
+box#worst {font-size:40px; color:#FFFFFF; background:#990000;}
+
+/* Box color/text IDs */
+
+#dblue {
+color: white;
+background:#004c99;
+}
+
+#lblue {
+color: white;
+background:#66B2FF;
+}
+
+
+#dgreen {
+color: white;
+background:#336600;
+}
+
+
+#purp{
+color:white;
+background:#4F0787;
+}
+
+
+#black {
+color: white; 
+background:black;
+}
+
+#dred {
+color:white;
+background:#990000;
+}
+
+#lred {
+color:white;
+background:#FF0000;
+}
+
+
+#gray {
+color:white;
+background:#404040;
+}
+
+#orange {
+color:white;
+background:#CC6600;
+}
+
+/* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
+
+.code { 
+color:#000; 
+background-color: #eeeeee;
+padding:10px; 
+font-size:15px; 
+font-family:courier; 
+font-weight:bold;
+text-align:left;
+margin:10px 0px 0px 0px;
+border-top:1px #E0E0E0 solid;
+border-bottom:1px #E0E0E0 solid;
+}
+
+/* This is for the RegEx cards I made, which closely mimic the "Terminal Commands" note type. 11/12/2013 */
+
+/* Changed to "commands" on 11/20/2013 so that it can be used on other note types without using a language-specific class name. */
+
+.commands { 
+color:#000; 
+background-color: #eeeeee;
+padding:10px; 
+font-size:27px; 
+font-family:courier; 
+font-weight:bold;
+text-align:center;
+margin:10px 0px 0px 0px;
+border-top:1px #E0E0E0 solid;
+border-bottom:1px #E0E0E0 solid;
+}
+
+.commands#small {
+font-size:15px;
+text-align:center;
+}
+
+/* Named after the Stack Overflow convention of making all quoted commands blue. 11/20/2013 */
+.commands#stack {
+color:#00008b;
+}
+
+/* This is for the "Terminal Commands" note type - 10/23/2013 */
+
+.terminal { 
+color:#00CC00; 
+background:black; 
+padding:15px; 
+font-size:27px; 
+font-family:courier; 
+font-weight:bold;
+}
+
+.massive {
+font-size:65px;
+}
+
+/* Question/answer seperator */
+
+hr {
+border: 0;
+color: #9E9E9E;
+background-color: #9E9E9E;
+height: 1px;
+}
+
+
+/* Image styling */
+
+
+images img {
+max-height:270px;
+max-width:300px;
+margin:0px 0px 10px 0px;
+padding:0px;
+clear:both;
+background:#fff;
+}
+
+/* For larger images, such as artwork */
+
+images.artwork img{
+max-height:250px;
+max-width:250px;
+border:2px solid lightgrey;
+}
+
+/* For portraits in the "People - Profiles" note type */
+
+images.portraits img {
+max-height:320px;
+max-width:320px;
+padding:1px;
+background:gray;
+}
+
+/* For images with borders (activated by the "Borders?" flag on certain note types) */
+
+images#b1 img {
+border:#A0A0A0 1px solid;
+}
+
+images#b1-pad img {
+border:#A0A0A0 1px solid;
+padding:12px;
+}
+
+images#nb img{
+border:0px;
+background:none;
+}
+
+/* Different image sizes */
+
+images.i2 img {
+max-height:220px;
+max-width:220px;
+border:1px lightgrey black;
+}
+
+images.i3 img{
+max-height:250px;
+max-width:250px;
+}
+
+images.i3-nb img{
+max-height:250px;
+max-width:250px;
+border:0px;
+}
+
+images.iv img {
+height:120px;
+width:100px;
+clear:none;
+}
+
+/* Special image size and background classes for foreign language cards. */
+
+images.iv-es img {
+@include espanol;
+height:120px;
+width:100px;
+border-bottom:1px #990000 solid;
+clear:none;
+padding:10px;
+}
+
+images.iv-fr img {
+@include francais;
+height:120px;
+width:100px;
+clear:none;
+padding:10px;
+}
+
+images.vocab img {
+max-height:220px;
+max-width:220px;
+border:1px lightgrey solid;
+padding:15px;
+}
+
+images.vocab#esp img{
+@include espanol;
+}
+
+
+images.vocab#fra img{
+@include francais;
+} 
+
+
+/* The "maps" class is used for my geography cards that display maps. */
+
+images.maps img {
+max-width:220px;
+max-height:220px;
+border:1px lightgrey solid;
+}
+
+/* The icon classes are for the icons placed within the header bar of every card. */
+
+images.icons img {
+max-height:32px;
+max-width:32px;
+border:0px;
+padding:0px;
+margin:4px -50px 0px 20px;
+float:left;
+background:none;
+}
+
+/* For placing additional icons on the right side if I decide I want that */
+/* Added 1/27/2014 */
+
+images.icons-right img {
+max-height:32px;
+max-width:32px;
+border:0px;
+padding:0px;
+margin:-48px 20px 0px 0px;
+float:right;
+background:none; }
+
+/* Boxes for the special foreign language verb note type */
+
+.verb-box {
+border:1px lightgrey solid;
+padding:10px 20px 0px 20px;
+margin: 0px 50px 0px 50px;
+width:auto;
+height:auto;
+text-align:center;
+}
+
+
+/* These classes are for boxing in images on my "Phrases" foreign language note type. */
+
+.phrase-box {
+border:1px lightgrey solid;
+padding:20px -0px 0px 0px;
+margin:10px;
+}
+
+.phrase-box img {
+padding: 0px 0px 10px 0px;
+margin: 0px;
+width:75px;
+height:95px;
+}
+
+.inset {
+margin:0px 20px 20px 20px;
+background:white;
+padding-top:20px;
+}
+
+
+/* Special boxes that surround foreign langauge cards with a gradient box that correlates to the color of the origin country's flag French cards have a gradient with blue, white and red, and Spanish cards use a red, gold, red gradient. */
+
+#es {
+@include espanol;
+border-bottom:1px #990000 solid;
+text-shadow: 0 0 2px white;
+}
+
+#es-2 {
+@include espanol;
+border:1px #990000 solid;
+color:black;
+text-shadow: 0 0 2px white;
+}
+
+#fr {
+@include francais;
+border-bottom:1px #004C99 solid;
+text-shadow: 0 0 2px white;
+}
+
+#fr-2 {
+@include francais;
+border:1px #004C99 solid;
+color:black;
+text-shadow: 0 0 2px white;
+
+}
+
+/* Header rectangles, which sit at the top of every single card */
+
+header {
+background: #000;
+position:fixed; 
+height:40px;
+top:0;
+right:0;
+left:0;
+width:100%;
+/* z-index: 100; /* the stack order: foreground */
+border-bottom:1px #e0e0e0 solid;
+}
+
+header h2 {
+color: #fff;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+text-align: center;
+margin-top:5px;
+font-size:25px;
+}
+
+/* Header bars with custom foreign flag gradient backgrounds */
+
+#header-espanol {
+@include espanol;
+border-bottom:1px #990000 solid;
+}
+
+#header-espanol h2 {
+color:#990000;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+text-align: center;
+text-shadow: black 0 1px;
+margin-top:5px;
+}
+
+
+#header-francais {
+@include francais;
+border-bottom:1px #004C99 solid;
+}
+
+#header-francais h2 {
+color:#004C99;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+text-align: center;
+text-shadow: black 0 1px;
+margin-top:5px;
+}
+
+/* Header color ids for various subjects, as specified in the "Styling" field on many note types */
+
+
+#Agriculture{background:#336600}
+#Anatomy {@include biology}
+#Art {@include art;}
+#Astronomy {@include science;}
+#Awards{background:#4F0787;}
+#Aviation {background:#99CCFF}
+#Biology {@include biology}
+#Books {@include art;}
+#Bullshit{@include society;}
+#Chemistry {@include science;}
+#Christianity {@include art;}
+#Crime {@include computing;}
+#Data {background:#FF8000}
+#Drugs {background:#663300;}
+#CompSci {@include computing;}
+#Cryptography {@include computing;}
+#Energy {@include computing;}
+#Food {@include biology;}
+#Fitness {@include biology}
+#Geography {@include geography}
+#Government {@include geography}
+#Geology {@include science;}
+#History {background:#C00707;}
+#Islam {@include art;}
+#Law {@include computing;}
+#Linguistics {background:#CC0000;}
+#Logic {@include science;}
+#Maritime {background:#000099;}
+#Mathematics {@include science;}
+#Medicine {@include science;}
+#Money {@include money;}
+#Music{@include art;}
+#Mythology {@include art;}
+#Neuroscience {@include science;}
+#Organizations{@include geography}
+#People {background:#4F0787;}
+#Poker {background:#006633;}
+#Philosophy {background:#555555;}
+#Physics {@include science;}
+#Probability {@include science;}
+#Programming {@include computing;}
+#Psychology {@include society;}
+#Religion {@include art;}
+#Sales {@include money;}
+#Set {@include science;}
+#Stupid {@include society;}
+#Science {@include science;}
+#Sports {background:#006633;}
+#Statistics {@include science;}
+#Typography {@include art;}
+#War {background:#C00707;}
+#World {@include geography}
