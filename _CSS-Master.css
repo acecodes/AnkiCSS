@@ -194,19 +194,6 @@ box#worst {
   color: white;
   background: #CC6600; }
 
-/* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
-.code {
-  color: #000;
-  background-color: #F7F7F7;
-  padding: 10px;
-  font-size: 15px;
-  font-family: courier;
-  font-weight: bold;
-  text-align: left;
-  margin: 10px 0px 0px 0px;
-  border-top: 1px #E0E0E0 solid;
-  border-bottom: 1px #E0E0E0 solid; }
-
 /* This is for the RegEx cards I made, which closely mimic the "Terminal Commands" note type. 11/12/2013 */
 /* Changed to "commands" on 11/20/2013 so that it can be used on other note types without using a language-specific class name. */
 .commands {
@@ -765,6 +752,20 @@ header h2 {
 #World {
   background: #0066CC; }
 
+/* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
+.code {
+  color: #000;
+  background-color: #F7F7F7;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  font-family: courier;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px 0px 0px 0px;
+  border-top: 1px #E0E0E0 solid;
+  border-bottom: 1px #E0E0E0 solid; }
+
 /* Syntax highlighting styles, courtesy of Pygments */
 pre .c {
   color: #990000;
@@ -962,29 +963,29 @@ pre .mo {
 
 /* Literal.Number.Oct */
 pre .sb {
-  color: #4070a0; }
+  color: #006600; }
 
 /* Literal.String.Backtick */
 pre .sc {
-  color: #4070a0; }
+  color: #006600; }
 
 /* Literal.String.Char */
 pre .sd {
-  color: #4070a0;
+  color: #006600;
   font-style: italic; }
 
 /* Literal.String.Doc */
 pre .s2 {
-  color: #4070a0; }
+  color: #006600; }
 
 /* Literal.String.Double */
 pre .se {
-  color: #4070a0;
+  color: #006600;
   font-weight: bold; }
 
 /* Literal.String.Escape */
 pre .sh {
-  color: #4070a0; }
+  color: #006600; }
 
 /* Literal.String.Heredoc */
 pre .si {
@@ -1001,7 +1002,7 @@ pre .sr {
 
 /* Literal.String.Regex */
 pre .s1 {
-  color: #4070a0; }
+  color: #006600; }
 
 /* Literal.String.Single */
 pre .ss {

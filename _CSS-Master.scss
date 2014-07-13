@@ -253,20 +253,6 @@ color:white;
 background:#CC6600;
 }
 
-/* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
-
-.code { 
-color:#000; 
-background-color: #F7F7F7;
-padding:10px; 
-font-size:15px; 
-font-family:courier; 
-font-weight:bold;
-text-align:left;
-margin:10px 0px 0px 0px;
-border-top:1px #E0E0E0 solid;
-border-bottom:1px #E0E0E0 solid;
-}
 
 /* This is for the RegEx cards I made, which closely mimic the "Terminal Commands" note type. 11/12/2013 */
 
@@ -629,10 +615,27 @@ margin-top:5px;
 #World {@include geography}
 
 
+/* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
+
+.code { 
+color:#000; 
+background-color: #F7F7F7;
+padding-left:10px;
+padding-right:10px;
+font-size:15px; 
+font-family:courier; 
+font-weight:bold;
+text-align:left;
+margin:10px 0px 0px 0px;
+border-top:1px #E0E0E0 solid;
+border-bottom:1px #E0E0E0 solid;
+}
+
 /* Syntax highlighting styles, courtesy of Pygments */
 
 @mixin numbers {color:#00CC00;}
 @mixin keywords {color:#0000FF;}
+@mixin strings {color:#006600;}
 
 pre .c { color: #990000; font-style: italic } /* Comment */
 pre .err { border: 1px solid #FF0000 } /* Error */
@@ -658,8 +661,8 @@ pre .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
 pre .kp { color: #007020 } /* Keyword.Pseudo */
 pre .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
 pre .kt { color: #902000 } /* Keyword.Type */
-pre .m { @include numbers } /* Literal.Number */
-pre .s { color: #006600; } /* Literal.String */
+pre .m { @include numbers; } /* Literal.Number */
+pre .s { @include strings; } /* Literal.String */
 pre .na { color: #4070a0 } /* Name.Attribute */
 pre .nb { color: #000099; } /* Name.Builtin */
 pre .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
@@ -678,16 +681,16 @@ pre .mf { @include numbers } /* Literal.Number.Float */
 pre .mh { @include numbers } /* Literal.Number.Hex */
 pre .mi { @include numbers } /* Literal.Number.Integer */
 pre .mo { @include numbers } /* Literal.Number.Oct */
-pre .sb { color: #4070a0 } /* Literal.String.Backtick */
-pre .sc { color: #4070a0 } /* Literal.String.Char */
-pre .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
-pre .s2 { color: #4070a0 } /* Literal.String.Double */
-pre .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
-pre .sh { color: #4070a0 } /* Literal.String.Heredoc */
+pre .sb { @include strings; } /* Literal.String.Backtick */
+pre .sc { @include strings; } /* Literal.String.Char */
+pre .sd { @include strings;; font-style: italic } /* Literal.String.Doc */
+pre .s2 { @include strings; } /* Literal.String.Double */
+pre .se { @include strings;; font-weight: bold } /* Literal.String.Escape */
+pre .sh { @include strings; } /* Literal.String.Heredoc */
 pre .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
 pre .sx { color: #c65d09 } /* Literal.String.Other */
 pre .sr { color: #235388 } /* Literal.String.Regex */
-pre .s1 { color: #4070a0 } /* Literal.String.Single */
+pre .s1 { @include strings; } /* Literal.String.Single */
 pre .ss { color: #517918 } /* Literal.String.Symbol */
 pre .bp { @include keywords } /* Name.Builtin.Pseudo */
 pre .vc { color: #bb60d5 } /* Name.Variable.Class */
