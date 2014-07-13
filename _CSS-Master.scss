@@ -620,8 +620,7 @@ margin-top:5px;
 .code { 
 color:#000; 
 background-color: #F7F7F7;
-padding-left:10px;
-padding-right:10px;
+padding:6px;
 font-size:15px; 
 font-family:courier; 
 font-weight:bold;
@@ -631,7 +630,12 @@ border-top:1px #E0E0E0 solid;
 border-bottom:1px #E0E0E0 solid;
 }
 
+
 /* Syntax highlighting styles, courtesy of Pygments */
+
+.highlight {padding:5px;}
+td {padding:0;}
+pre {margin:0; padding:0px;}
 
 @mixin numbers {color:#00CC00;}
 @mixin keywords {color:#0000FF;}
