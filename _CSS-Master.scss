@@ -630,6 +630,12 @@ border-top:1px #E0E0E0 solid;
 border-bottom:1px #E0E0E0 solid;
 }
 
+.code table {margin: 0px 5px 0px 5px;}
+pre {
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -o-pre-wrap;
+}
 
 /* Syntax highlighting styles, courtesy of Pygments */
 
