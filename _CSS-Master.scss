@@ -20,6 +20,7 @@ the task of editing this stylesheet very managable.
 @mixin money {background:#006600;}
 @mixin science {background:#221079;}
 @mixin society {background:#808080;}
+@mixin history {background:#C00707;}
 
 @mixin francais {
 	/* Background gradient code */
@@ -563,55 +564,56 @@ margin-top:5px;
 
 #Agriculture{background:#336600}
 #Anatomy {@include biology}
-#Art {@include art;}
-#Astronomy {@include science;}
+#Art {@include art}
+#Astronomy {@include science}
 #Awards{background:#4F0787;}
 #Aviation {background:#99CCFF}
 #Biology {@include biology}
-#Books {@include art;}
-#Bullshit{@include society;}
-#Chemistry {@include science;}
-#Christianity {@include art;}
-#Crime {@include computing;}
-#Data {background:#FF8000}
+#Books {@include art}
+#Bullshit{@include society}
+#Chemistry {@include science}
+#Christianity {@include art}
+#Clothing {@include art}
+#Crime {@include computing}
+#Data {background:#FF8000;}
 #Drugs {background:#663300;}
-#CompSci {@include computing;}
-#Cryptography {@include computing;}
-#Energy {@include computing;}
-#Food {@include biology;}
+#CompSci {@include computing}
+#Cryptography {@include computing}
+#Energy {@include computing}
+#Food {@include biology}
 #Fitness {@include biology}
 #Geography {@include geography}
 #Government {@include geography}
-#Geology {@include science;}
-#History {background:#C00707;}
-#Islam {@include art;}
-#Law {@include computing;}
+#Geology {@include science}
+#History {@include history}
+#Islam {@include art}
+#Law {@include computing}
 #Linguistics {background:#CC0000;}
-#Logic {@include science;}
+#Logic {@include science}
 #Maritime {background:#000099;}
-#Mathematics {@include science;}
-#Medicine {@include science;}
-#Money {@include money;}
-#Music{@include art;}
-#Mythology {@include art;}
-#Neuroscience {@include science;}
+#Mathematics {@include science}
+#Medicine {@include science}
+#Money {@include money}
+#Music{@include art}
+#Mythology {@include art}
+#Neuroscience {@include science}
 #Organizations{@include geography}
 #People {background:#4F0787;}
 #Poker {background:#006633;}
 #Philosophy {background:#555555;}
-#Physics {@include science;}
-#Probability {@include science;}
-#Programming {@include computing;}
-#Psychology {@include society;}
-#Religion {@include art;}
-#Sales {@include money;}
-#Set {@include science;}
-#Stupid {@include society;}
-#Science {@include science;}
+#Physics {@include science}
+#Probability {@include science}
+#Programming {@include computing}
+#Psychology {@include society}
+#Religion {@include art}
+#Sales {@include money}
+#Set {@include science}
+#Stupid {@include society}
+#Science {@include science}
 #Sports {background:#006633;}
-#Statistics {@include science;}
-#Typography {@include art;}
-#War {background:#C00707;}
+#Statistics {@include science}
+#Typography {@include art}
+#War {@include history}
 #World {@include geography}
 
 
