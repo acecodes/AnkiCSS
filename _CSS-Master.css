@@ -17,8 +17,8 @@ the task of editing this stylesheet very managable.
   text-align: center;
   background-color: #fff;
   background-color: #fff;
-  padding: 0px 0px 0px 0px;
-  margin: 60px 0px 0px 0px;
+  padding: 0;
+  margin: 10% 0 0 0;
   position: relative;
   overflow-x: hidden;
   clear: both; }
@@ -60,7 +60,7 @@ p {
 
 p.big {
   font-weight: bold;
-  font-size: 24px; }
+  font-size: 22px; }
 
 p.huge {
   font-size: 40px; }
@@ -700,7 +700,7 @@ header h2 {
   background: #660066; }
 
 #Neuroscience {
-  background: #221079; }
+  background: #4C9900; }
 
 #Organizations {
   background: #0066CC; }

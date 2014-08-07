@@ -53,8 +53,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', end
  text-align: center;
  background-color: #fff;
  background-color: #fff;
- padding:0px 0px 0px 0px;
- margin:60px 0px 0px 0px;
+ padding: 0;
+ margin: 10% 0 0 0;
  position:relative;
  overflow-x:hidden;
  clear: both;
@@ -92,7 +92,7 @@ margin:0px 0px 0px 0px;
 
 p.big {
 font-weight:bold;
-font-size:24px;
+font-size:22px;
 }
 
 p.huge {
@@ -597,7 +597,7 @@ margin-top:5px;
 #Money {@include money}
 #Music{@include art}
 #Mythology {@include art}
-#Neuroscience {@include science}
+#Neuroscience {@include biology}
 #Organizations{@include geography}
 #People {background:#4F0787;}
 #Poker {background:#006633;}
