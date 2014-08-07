@@ -54,10 +54,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', end
  background-color: #fff;
  background-color: #fff;
  padding: 0;
- margin: 10% 0 0 0;
+ margin: 60px 0 0 0;
  position:relative;
  overflow-x:hidden;
  clear: both;
+ width:auto;
 }
 
 .card#padded{
@@ -165,33 +166,29 @@ max-width:50px;
 /* On 10/23/2013 I changed these from div classes (.box) to their own selectors */
 
 box {
-margin:1px 0px 0px 0px;
+margin:1px auto;
 font-size:22px;
 font-weight:bold;
 padding:20px;
 display:inherit;
 clear:both;
 font-family:sans-serif;
+width:auto;
+text-align:center;
 }
 
 box.small {
-margin:1px 0px 0px 0px;
 font-size:18px;
-font-weight:bold;
 padding:5px;
 }
 
 box.big {
-margin:1px 0px 0px 0px;
 font-size:23px;
-font-weight:bold;
 padding:10px;
 }
 
 box.huge {
-margin:0px 0px 0px 0px;
 font-size:65px;
-font-weight:bold;
 padding:10px;
 }
 
@@ -310,29 +307,28 @@ height: 1px;
 
 /* Image styling */
 
-
 images img {
-max-height:270px;
-max-width:300px;
-margin:0px 0px 10px 0px;
-padding:0px;
+max-height:60%;
+max-width:60%;
+margin:auto auto 15px auto; 
+padding:0;
 clear:both;
 background:#fff;
 }
 
 /* For larger images, such as artwork */
 
-images.artwork img{
-max-height:250px;
-max-width:250px;
+images.artwork img {
+max-height:65%;
+max-width:65%;
 border:2px solid lightgrey;
 }
 
 /* For portraits in the "People - Profiles" note type */
 
 images.portraits img {
-max-height:320px;
-max-width:320px;
+max-height:70%;
+max-width:70%;
 padding:1px;
 background:gray;
 }
@@ -515,11 +511,12 @@ header {
 background: #000;
 position:fixed; 
 height:40px;
+width:100%;
 top:0;
 right:0;
 left:0;
-width:100%;
-/* z-index: 100; /* the stack order: foreground */
+bottom:30px;
+margin-bottom:30px;
 border-bottom:1px #e0e0e0 solid;
 }
 
