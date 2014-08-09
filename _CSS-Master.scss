@@ -49,7 +49,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', end
  
  .card {
  font-family: serif;
- font-size: 18px;
+ font-size: 1.3em;
  text-align: center;
  background-color: #fff;
  background-color: #fff;
@@ -80,10 +80,10 @@ a {color:#0080FF;}
 
 /* Base styles for h1, h2, etc. */
 
-h1 { font-size:32px; font-family:sans-serif; }
-h2 { font-size:29px; font-family:sans-serif; }
-h3 { font-size:23px; font-family:sans-serif; }
-h4 { font-size:15px; font-family:sans-serif; }
+h1 { font-size:2.0em; font-family:sans-serif; }
+h2 { font-size:1.5em; font-family:sans-serif; }
+h3 { font-size:1.2em; font-family:sans-serif; }
+h4 { font-size:0.8em; font-family:sans-serif; }
 
 /* Styles for various text sizes */
 p {
@@ -93,15 +93,15 @@ margin:0px 0px 0px 0px;
 
 p.big {
 font-weight:bold;
-font-size:22px;
+font-size:1.5em;
 }
 
 p.huge {
-font-size:40px;
+font-size:3em;
 }
 
 p.massive {
-font-size:65px;
+font-size:3.5em;
 }
 
 p.notes {
@@ -111,12 +111,12 @@ font-style:italic;
 /* Styling for Wikipedia and reference links at the bottom of each card */
 
 p.wiki {
-font-size:12px;
+font-size:0.8em;
 margin:10px 0px 10px 0px;
 }
 
 p.wikio {
-font-size:12px;
+font-size:0.8em;
 margin:10px 0px 10px 0px;
 font-style:italic;
 }
@@ -133,7 +133,7 @@ color:#003366;
 
 p.tex {
 font-family:serif;
-font-size:25px;
+font-size:1.2em;
 padding:10px;
 }
 
@@ -141,7 +141,7 @@ padding:10px;
 
 .quotes {
 font-style:italic;
-font-size:23px;
+font-size:1.2em;
 background-color:#C0C0E0;
 padding:0px 20px 0px 20px;
 }
@@ -167,7 +167,7 @@ max-width:50px;
 
 box {
 margin:1px auto;
-font-size:22px;
+font-size:1.3em;
 font-weight:bold;
 padding:20px;
 display:inherit;
@@ -178,28 +178,28 @@ text-align:center;
 }
 
 box.small {
-font-size:18px;
-padding:5px;
+font-size:1em;
+padding:7px;
 }
 
 box.big {
-font-size:23px;
+font-size:1.5em;
 padding:10px;
 }
 
 box.huge {
-font-size:65px;
+font-size:3em;
 padding:10px;
 }
 
-box.huge sup { font-size:40px;}
+box.huge sup { font-size:2.1em;}
 
 box a {
 color:white;
 }
 
 /* Time complexity styles */
-box#worst {font-size:40px; color:#FFFFFF; background:#990000;}
+box#worst {font-size:2.4em; color:#FFFFFF; background:#990000;}
 
 /* Box color/text IDs */
 
@@ -261,7 +261,7 @@ background:#CC6600;
 color:#000; 
 background-color: #eeeeee;
 padding:10px; 
-font-size:27px; 
+font-size:1.3em; 
 font-family:courier; 
 font-weight:bold;
 text-align:center;
@@ -271,7 +271,7 @@ border-bottom:1px #E0E0E0 solid;
 }
 
 .commands#small {
-font-size:15px;
+font-size:0.8em;
 text-align:center;
 }
 
@@ -286,13 +286,13 @@ color:#00008b;
 color:#00CC00; 
 background:black; 
 padding:15px; 
-font-size:27px; 
+font-size:1.8px; 
 font-family:courier; 
 font-weight:bold;
 }
 
 .massive {
-font-size:65px;
+font-size:3.5em;
 }
 
 /* Question/answer seperator */
@@ -308,8 +308,8 @@ height: 1px;
 /* Image styling */
 
 images img {
-max-height:60%;
-max-width:60%;
+max-height:45%;
+max-width:45%;
 margin:auto auto 15px auto; 
 padding:0;
 clear:both;
@@ -319,16 +319,16 @@ background:#fff;
 /* For larger images, such as artwork */
 
 images.artwork img {
-max-height:65%;
-max-width:65%;
+max-height:50%;
+max-width:50%;
 border:2px solid lightgrey;
 }
 
 /* For portraits in the "People - Profiles" note type */
 
 images.portraits img {
-max-height:70%;
-max-width:70%;
+max-height:55%;
+max-width:55%;
 padding:1px;
 background:gray;
 }
@@ -394,8 +394,8 @@ padding:10px;
 }
 
 images.vocab img {
-max-height:220px;
-max-width:220px;
+max-height:30%;
+max-width:30%;
 border:1px lightgrey solid;
 padding:15px;
 }
@@ -423,9 +423,9 @@ border:1px lightgrey solid;
 images.icons img {
 max-height:32px;
 max-width:32px;
-border:0px;
-padding:0px;
-margin:4px -50px 0px 20px;
+border:0;
+padding:0;
+margin:5px -50px 0px 20px;
 float:left;
 background:none;
 }
@@ -433,7 +433,7 @@ background:none;
 /* For placing additional icons on the right side if I decide I want that */
 /* Added 1/27/2014 */
 
-images.icons-right img {
+images.icons#right img {
 max-height:32px;
 max-width:32px;
 border:0px;
@@ -525,7 +525,7 @@ color: #fff;
 text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 text-align: center;
 margin-top:5px;
-font-size:25px;
+font-size:1.5em;
 }
 
 /* Header bars with custom foreign flag gradient backgrounds */
@@ -621,7 +621,7 @@ margin-top:5px;
 color:#000; 
 background-color: #F7F7F7;
 padding:6px;
-font-size:15px; 
+font-size:1.2em; 
 font-family:courier; 
 font-weight:bold;
 text-align:left;
