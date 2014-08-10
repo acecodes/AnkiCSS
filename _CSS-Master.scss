@@ -11,7 +11,14 @@ the task of editing this stylesheet very managable.
  
  *************************/
 
-/* This sets the base style of all cards, including font size, text alignment and background color. */
+// Mixins
+
+@mixin text-small {font-size:0.8em;}
+@mixin text-normal {font-size: 1.15em;}
+@mixin text-big {font-size:1.35em;}
+@mixin text-huge {font-size:2.9em;}
+@mixin text-massive {font-size:3.2em;}
+@mixin text-code {font-size:1.0em;}
 
 @mixin art {background:#660066;}
 @mixin biology {background:#4C9900;}
@@ -46,10 +53,13 @@ background: linear-gradient(to right, #ff1a00 0%,#fff200 36%,#fff200 58%,#ff1a00
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#ff1a00',GradientType=1 ); /* IE6-9 */
 /* z-index: 100; /* the stack order: foreground */
 }
+
+
+/* This sets the base style of all cards, including font size, text alignment and background color. */
  
  .card {
+ @include text-normal;
  font-family: serif;
- font-size: 1.3em;
  text-align: center;
  background-color: #fff;
  background-color: #fff;
@@ -80,9 +90,9 @@ a {color:#0080FF;}
 
 /* Base styles for h1, h2, etc. */
 
-h1 { font-size:2.0em; font-family:sans-serif; }
-h2 { font-size:1.5em; font-family:sans-serif; }
-h3 { font-size:1.2em; font-family:sans-serif; }
+h1 { font-size:1.8em; font-family:sans-serif; }
+h2 { font-size:1.3em; font-family:sans-serif; }
+h3 { font-size:1.1em; font-family:sans-serif; }
 h4 { font-size:0.8em; font-family:sans-serif; }
 
 /* Styles for various text sizes */
@@ -93,15 +103,15 @@ margin:0px 0px 0px 0px;
 
 p.big {
 font-weight:bold;
-font-size:1.5em;
+@include text-big;
 }
 
 p.huge {
-font-size:3em;
+@include text-huge;
 }
 
 p.massive {
-font-size:3.5em;
+@include text-massive;
 }
 
 p.notes {
@@ -111,12 +121,12 @@ font-style:italic;
 /* Styling for Wikipedia and reference links at the bottom of each card */
 
 p.wiki {
-font-size:0.8em;
+@include text-small;
 margin:10px 0px 10px 0px;
 }
 
 p.wikio {
-font-size:0.8em;
+@include text-small;
 margin:10px 0px 10px 0px;
 font-style:italic;
 }
@@ -133,7 +143,7 @@ color:#003366;
 
 p.tex {
 font-family:serif;
-font-size:1.2em;
+@include text-big;
 padding:10px;
 }
 
@@ -141,7 +151,7 @@ padding:10px;
 
 .quotes {
 font-style:italic;
-font-size:1.2em;
+@include text-big;
 background-color:#C0C0E0;
 padding:0px 20px 0px 20px;
 }
@@ -167,9 +177,9 @@ max-width:50px;
 
 box {
 margin:1px auto;
-font-size:1.3em;
+@include text-normal;
 font-weight:bold;
-padding:20px;
+padding:1em;
 display:inherit;
 clear:both;
 font-family:sans-serif;
@@ -178,28 +188,26 @@ text-align:center;
 }
 
 box.small {
-font-size:1em;
-padding:7px;
+@include text-normal;
+padding:0.3em;
 }
 
 box.big {
-font-size:1.5em;
-padding:10px;
+@include text-big;
+padding:0.5em;
 }
 
 box.huge {
-font-size:3em;
-padding:10px;
+@include text-huge;
+padding:0.5em;
 }
-
-box.huge sup { font-size:2.1em;}
 
 box a {
 color:white;
 }
 
 /* Time complexity styles */
-box#worst {font-size:2.4em; color:#FFFFFF; background:#990000;}
+box#worst {@include text-huge; color:#FFFFFF; background:#990000;}
 
 /* Box color/text IDs */
 
@@ -260,18 +268,17 @@ background:#CC6600;
 .commands { 
 color:#000; 
 background-color: #eeeeee;
-padding:10px; 
-font-size:1.3em; 
+padding:0.5em; 
+@include text-normal;
 font-family:courier; 
 font-weight:bold;
 text-align:center;
-margin:10px 0px 0px 0px;
 border-top:1px #E0E0E0 solid;
 border-bottom:1px #E0E0E0 solid;
 }
 
 .commands#small {
-font-size:0.8em;
+@include text-small;
 text-align:center;
 }
 
@@ -286,13 +293,13 @@ color:#00008b;
 color:#00CC00; 
 background:black; 
 padding:15px; 
-font-size:1.8px; 
+@include text-big;
 font-family:courier; 
 font-weight:bold;
 }
 
 .massive {
-font-size:3.5em;
+@include text-massive;
 }
 
 /* Question/answer seperator */
@@ -308,9 +315,9 @@ height: 1px;
 /* Image styling */
 
 images img {
-max-height:45%;
-max-width:45%;
-margin:auto auto 15px auto; 
+max-height:43%;
+max-width:43%;
+margin:auto auto 0.25em auto; 
 padding:0;
 clear:both;
 background:#fff;
@@ -327,8 +334,8 @@ border:2px solid lightgrey;
 /* For portraits in the "People - Profiles" note type */
 
 images.portraits img {
-max-height:55%;
-max-width:55%;
+max-height:50%;
+max-width:50%;
 padding:1px;
 background:gray;
 }
@@ -394,8 +401,8 @@ padding:10px;
 }
 
 images.vocab img {
-max-height:30%;
-max-width:30%;
+max-height:40%;
+max-width:40%;
 border:1px lightgrey solid;
 padding:15px;
 }
@@ -425,7 +432,7 @@ max-height:32px;
 max-width:32px;
 border:0;
 padding:0;
-margin:5px -50px 0px 20px;
+margin:0.3em -3em 0 1em;
 float:left;
 background:none;
 }
@@ -510,22 +517,22 @@ text-shadow: 0 0 2px white;
 header {
 background: #000;
 position:fixed; 
-height:40px;
+height:2.5em;
+line-height:0.25em;
 width:100%;
 top:0;
 right:0;
 left:0;
-bottom:30px;
+bottom:0;
 margin-bottom:30px;
 border-bottom:1px #e0e0e0 solid;
+text-align: center;
 }
 
 header h2 {
 color: #fff;
 text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-text-align: center;
-margin-top:5px;
-font-size:1.5em;
+@include text-big;
 }
 
 /* Header bars with custom foreign flag gradient backgrounds */
@@ -538,9 +545,8 @@ border-bottom:1px #990000 solid;
 #header-espanol h2 {
 color:#990000;
 text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-text-align: center;
 text-shadow: black 0 1px;
-margin-top:5px;
+line-height:0.2em;
 }
 
 
@@ -552,9 +558,8 @@ border-bottom:1px #004C99 solid;
 #header-francais h2 {
 color:#004C99;
 text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-text-align: center;
 text-shadow: black 0 1px;
-margin-top:5px;
+line-height:0.2em;
 }
 
 /* Header color ids for various subjects, as specified in the "Styling" field on many note types */
@@ -618,10 +623,10 @@ margin-top:5px;
 /* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
 
 .code { 
+@include text-code;
 color:#000; 
 background-color: #F7F7F7;
-padding:6px;
-font-size:1.2em; 
+padding:0.5em;
 font-family:courier; 
 font-weight:bold;
 text-align:left;
