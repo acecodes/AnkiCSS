@@ -144,14 +144,14 @@ color:#003366;
 p.tex {
 font-family:serif;
 @include text-big;
-padding:10px;
+padding:0.7em;
 }
 
 /* Quote styles for the "Quote(s)" cards generated within my "People - Profiles" note type. 11-19-2013 */
 
 .quotes {
 font-style:italic;
-@include text-big;
+@include text-normal;
 background-color:#C0C0E0;
 padding:0px 20px 0px 20px;
 }
@@ -311,12 +311,11 @@ background-color: #9E9E9E;
 height: 1px;
 }
 
-
 /* Image styling */
 
 images img {
-max-height:43%;
-max-width:43%;
+max-height:40%;
+max-width:70%;
 margin:auto auto 0.25em auto; 
 padding:0;
 clear:both;
@@ -327,7 +326,7 @@ background:#fff;
 
 images.artwork img {
 max-height:50%;
-max-width:50%;
+max-width:80%;
 border:2px solid lightgrey;
 }
 
@@ -335,7 +334,7 @@ border:2px solid lightgrey;
 
 images.portraits img {
 max-height:50%;
-max-width:50%;
+max-width:80%;
 padding:1px;
 background:gray;
 }
@@ -401,8 +400,8 @@ padding:10px;
 }
 
 images.vocab img {
-max-height:40%;
-max-width:40%;
+max-height:50%;
+max-width:70%;
 border:1px lightgrey solid;
 padding:15px;
 }

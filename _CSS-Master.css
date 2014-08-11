@@ -92,12 +92,12 @@ p.wiki#fra a {
 p.tex {
   font-family: serif;
   font-size: 1.35em;
-  padding: 10px; }
+  padding: 0.7em; }
 
 /* Quote styles for the "Quote(s)" cards generated within my "People - Profiles" note type. 11-19-2013 */
 .quotes {
   font-style: italic;
-  font-size: 1.35em;
+  font-size: 1.15em;
   background-color: #C0C0E0;
   padding: 0px 20px 0px 20px; }
 
@@ -231,8 +231,8 @@ hr {
 
 /* Image styling */
 images img {
-  max-height: 43%;
-  max-width: 43%;
+  max-height: 40%;
+  max-width: 70%;
   margin: auto auto 0.25em auto;
   padding: 0;
   clear: both;
@@ -241,13 +241,13 @@ images img {
 /* For larger images, such as artwork */
 images.artwork img {
   max-height: 50%;
-  max-width: 50%;
+  max-width: 80%;
   border: 2px solid lightgrey; }
 
 /* For portraits in the "People - Profiles" note type */
 images.portraits img {
   max-height: 50%;
-  max-width: 50%;
+  max-width: 80%;
   padding: 1px;
   background: gray; }
 
@@ -332,8 +332,8 @@ images.iv-fr img {
   padding: 10px; }
 
 images.vocab img {
-  max-height: 40%;
-  max-width: 40%;
+  max-height: 50%;
+  max-width: 70%;
   border: 1px lightgrey solid;
   padding: 15px; }
 
