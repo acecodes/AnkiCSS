@@ -150,7 +150,8 @@ box a {
 box#worst {
   font-size: 2.9em;
   color: #FFFFFF;
-  background: #990000; }
+  background: #990000;
+  padding: 0.2em; }
 
 /* Box color/text IDs */
 #dblue {
