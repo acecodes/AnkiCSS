@@ -16,8 +16,8 @@ the task of editing this stylesheet very managable.
 @mixin text-small {font-size:0.8em;}
 @mixin text-normal {font-size: 1.15em;}
 @mixin text-big {font-size:1.35em;}
-@mixin text-huge {font-size:2.9em;}
-@mixin text-massive {font-size:3.2em;}
+@mixin text-huge {font-size:2.9em; padding:0.3em;}
+@mixin text-massive {font-size:3.2em; padding:0.3em;}
 @mixin text-code {font-size:1.0em;}
 
 @mixin art {background:#660066;}
@@ -194,12 +194,10 @@ padding:0.3em;
 
 box.big {
 @include text-big;
-padding:0.5em;
 }
 
 box.huge {
 @include text-huge;
-padding:0.5em;
 }
 
 box a {

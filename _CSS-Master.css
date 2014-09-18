@@ -64,10 +64,12 @@ p.big {
   font-size: 1.35em; }
 
 p.huge {
-  font-size: 2.9em; }
+  font-size: 2.9em;
+  padding: 0.3em; }
 
 p.massive {
-  font-size: 3.2em; }
+  font-size: 3.2em;
+  padding: 0.3em; }
 
 p.notes {
   font-style: italic; }
@@ -136,12 +138,11 @@ box.small {
   padding: 0.3em; }
 
 box.big {
-  font-size: 1.35em;
-  padding: 0.5em; }
+  font-size: 1.35em; }
 
 box.huge {
   font-size: 2.9em;
-  padding: 0.5em; }
+  padding: 0.3em; }
 
 box a {
   color: white; }
@@ -149,6 +150,7 @@ box a {
 /* Time complexity styles */
 box#worst {
   font-size: 2.9em;
+  padding: 0.3em;
   color: #FFFFFF;
   background: #990000;
   padding: 0.2em; }
@@ -221,7 +223,8 @@ box#worst {
   font-weight: bold; }
 
 .massive {
-  font-size: 3.2em; }
+  font-size: 3.2em;
+  padding: 0.3em; }
 
 /* Question/answer seperator */
 hr {
