@@ -216,7 +216,7 @@ box#worst {
 
 /* This is for the "Terminal Commands" note type - 10/23/2013 */
 .terminal {
-  color: #00CC00;
+  color: white;
   background: black;
   padding: 15px;
   font-size: 1.35em;
