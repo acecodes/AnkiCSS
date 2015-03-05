@@ -98,6 +98,7 @@ h4 { font-size:0.8em; font-family:sans-serif; }
 
 /* Styles for various text sizes */
 p {
+font-size: 1.2em;
 padding:0px 45px 0px 45px;
 margin:0px 0px 0px 0px;
 }
@@ -153,10 +154,18 @@ padding:0.7em;
 .quotes {
 font-style:italic;
 @include text-normal;
-background-color:#C0C0E0;
-padding:0px 20px 0px 20px;
+padding:0;
 }
 
+blockquote {
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
+  border-left: 5px solid black;
+  text-align:left;
+}
+
+/* Obsolete now, left for legacy purposes - 3/5/2015 */
 .quotes#right { text-align:right; padding:15px 30px 10px 0px;}
 .quotes#left { text-align:left; padding:20px 10px 10px 30px;}
 
@@ -623,6 +632,7 @@ line-height:0.2em;
 
 .code { 
 @include text-code;
+max-width: 100%;
 color:#000; 
 background-color: #F7F7F7;
 padding:0.5em;
@@ -744,3 +754,22 @@ pre .il { @include numbers } /* Literal.Number.Integer.Long */.syntax pre .hll {
 .syntax pre .sr { color: #a31515 } /* Literal.String.Regex */
 .syntax pre .s1 { color: #a31515 } /* Literal.String.Single */
 .syntax pre .ss { color: #a31515 } /* Literal.String.Symbol */
+
+/* Phone screen section */
+@media screen and (max-width: 420px) {
+    p {padding:0px 15px 0px 15px; font-size: 1em;}
+    p.notes { font-size: 1.1em; }
+    p.big { font-size: 1.2em; }
+    p.huge {font-size: 2.2em; }
+    box.big {font-size:1.3em; padding: 10px;}
+    box.small {font-size:1em; padding: 5px;}
+    .quotes { font-size:1.1em; }
+    images img {
+        max-height:50%;
+        max-width:90%;
+        margin:auto auto 0.2em auto; 
+        padding:0;
+        clear:both;
+        background:#fff;
+        }
+}

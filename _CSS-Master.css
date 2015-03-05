@@ -57,6 +57,7 @@ h4 {
 
 /* Styles for various text sizes */
 p {
+  font-size: 1.2em;
   padding: 0px 45px 0px 45px;
   margin: 0px 0px 0px 0px; }
 
@@ -101,9 +102,16 @@ p.tex {
 .quotes {
   font-style: italic;
   font-size: 1.15em;
-  background-color: #C0C0E0;
-  padding: 0px 20px 0px 20px; }
+  padding: 0; }
 
+blockquote {
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
+  border-left: 5px solid black;
+  text-align: left; }
+
+/* Obsolete now, left for legacy purposes - 3/5/2015 */
 .quotes#right {
   text-align: right;
   padding: 15px 30px 10px 0px; }
@@ -757,6 +765,7 @@ header h2 {
 /* Used for displaying code snippets in the "Programming - Trivia" note type - 11/2/2013 */
 .code {
   font-size: 1.0em;
+  max-width: 100%;
   color: #000;
   background-color: #F7F7F7;
   padding: 0.5em;
@@ -1182,5 +1191,38 @@ pre .il {
   color: #a31515; }
 
 /* Literal.String.Symbol */
+/* Phone screen section */
+@media screen and (max-width: 420px) {
+  p {
+    padding: 0px 15px 0px 15px;
+    font-size: 1em; }
+
+  p.notes {
+    font-size: 1.1em; }
+
+  p.big {
+    font-size: 1.2em; }
+
+  p.huge {
+    font-size: 2.2em; }
+
+  box.big {
+    font-size: 1.3em;
+    padding: 10px; }
+
+  box.small {
+    font-size: 1em;
+    padding: 5px; }
+
+  .quotes {
+    font-size: 1.1em; }
+
+  images img {
+    max-height: 50%;
+    max-width: 90%;
+    margin: auto auto 0.2em auto;
+    padding: 0;
+    clear: both;
+    background: #fff; } }
 
 /*# sourceMappingURL=_CSS-Master.css.map */
