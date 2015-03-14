@@ -103,6 +103,8 @@ padding:0px 45px 0px 45px;
 margin:0px 0px 0px 0px;
 }
 
+p.cloze-text { text-align:left; }
+
 p.big {
 font-weight:bold;
 @include text-big;
