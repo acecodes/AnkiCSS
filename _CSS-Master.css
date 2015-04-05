@@ -771,7 +771,6 @@ header h2 {
   max-width: 100%;
   color: #000;
   background-color: #F7F7F7;
-  padding: 0.5em;
   font-family: courier;
   font-weight: bold;
   text-align: left;
@@ -787,9 +786,12 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap; }
 
+code {
+  font-weight: bold; }
+
 /* Syntax highlighting styles, courtesy of Pygments */
 .highlight {
-  padding: 5px; }
+  padding: 3px; }
 
 td {
   padding: 0; }
