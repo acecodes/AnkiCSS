@@ -21,12 +21,17 @@ the task of editing this stylesheet very managable.
 @mixin text-code {font-size:1.0em;}
 
 @mixin art {background:#660066;}
+@mixin aviation {background:#99CCFF}
 @mixin biology {background:#4C9900;}
 @mixin computing {background:#000000;}
 @mixin geography {background:#0066CC;}
-@mixin money {background:#006600;}
+@mixin language {background:#CC0000;}
+@mixin money {background:#336600;}
+@mixin philosophy {background:#555555;}
+@mixin people {background:#4F0787;}
 @mixin science {background:#221079;}
 @mixin society {background:#808080;}
+@mixin sports {background:#006633;}
 @mixin history {background:#C00707;}
 
 @mixin francais {
@@ -574,12 +579,13 @@ line-height:0.2em;
 /* Header color ids for various subjects, as specified in the "Styling" field on many note types */
 
 
-#Agriculture{background:#336600}
+#Agriculture{@include money}
 #Anatomy {@include biology}
+#Analytics {@include computing}
 #Art {@include art}
 #Astronomy {@include science}
-#Awards{background:#4F0787;}
-#Aviation {background:#99CCFF}
+#Awards{@include society}
+#Aviation {@include aviation}
 #Biology {@include biology}
 #Books {@include art}
 #Bullshit{@include society}
@@ -587,11 +593,12 @@ line-height:0.2em;
 #Christianity {@include art}
 #Clothing {@include art}
 #Crime {@include computing}
-#Data {background:#FF8000;}
-#Drugs {background:#663300;}
+#Data {@include computing}
+#Design {@include art}
+#Drugs {@include money}
 #CompSci {@include computing}
 #Cryptography {@include computing}
-#Energy {@include computing}
+#Energy {@include money}
 #Food {@include biology}
 #Fitness {@include biology}
 #Geography {@include geography}
@@ -600,9 +607,9 @@ line-height:0.2em;
 #History {@include history}
 #Islam {@include art}
 #Law {@include computing}
-#Linguistics {background:#CC0000;}
+#Linguistics {@include language}
 #Logic {@include science}
-#Maritime {background:#000099;}
+#Maritime {@include geography}
 #Mathematics {@include science}
 #Medicine {@include science}
 #Money {@include money}
@@ -610,9 +617,9 @@ line-height:0.2em;
 #Mythology {@include art}
 #Neuroscience {@include biology}
 #Organizations{@include geography}
-#People {background:#4F0787;}
-#Poker {background:#006633;}
-#Philosophy {background:#555555;}
+#People {@include people}
+#Poker {@include sports}
+#Philosophy {@include philosophy}
 #Physics {@include science}
 #Probability {@include science}
 #Programming {@include computing}
@@ -622,7 +629,7 @@ line-height:0.2em;
 #Set {@include science}
 #Stupid {@include society}
 #Science {@include science}
-#Sports {background:#006633;}
+#Sports {@include sports}
 #Statistics {@include science}
 #Typography {@include art}
 #War {@include history}
