@@ -330,7 +330,7 @@ height: 1px;
 /* Image styling */
 
 images img {
-max-height:45%
+max-height:45%;
 max-width:65%;
 margin:auto auto 0.25em auto; 
 padding:0;
@@ -612,7 +612,7 @@ line-height:0.2em;
 #Logic {@include science}
 #Maritime {@include geography}
 #Mathematics {@include science}
-#Medicine {@include science}
+#Medicine {@include biology}
 #Money {@include money}
 #Music{@include art}
 #Mythology {@include art}
