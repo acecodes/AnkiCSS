@@ -33,6 +33,7 @@ the task of editing this stylesheet very managable.
 @mixin society {background:#808080;}
 @mixin sports {background:#006633;}
 @mixin history {background:#C00707;}
+@mixin health {background:#15B0E0;}
 
 @mixin francais {
 	/* Background gradient code */
@@ -612,7 +613,7 @@ line-height:0.2em;
 #Logic {@include science}
 #Maritime {@include geography}
 #Mathematics {@include science}
-#Medicine {@include biology}
+#Medicine {@include health}
 #Money {@include money}
 #Music{@include art}
 #Mythology {@include art}
