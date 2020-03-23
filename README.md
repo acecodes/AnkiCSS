@@ -1,16 +1,16 @@
-#Anki CSS File
+# Anki CSS File
 
-##Description
+## Description
 
 This is the CSS file that runs my Anki deck. I've been working on for nearly two years now, and as you can probably see in the comments, it has undergone many changes. The deck itself has over 50 note types spread out over 11,500 (as of 3/21/2014) individual cards.
 
-###*Note: If you'd like to get an in-depth look at how I use and structure Anki cards, please check out my book, [The Learning Factory](http://www.52aces.com/books).*
+### *Note: If you'd like to get an in-depth look at how I use and structure Anki cards, please check out my book, [The Learning Factory](http://www.52aces.com/books).*
 
 
-##How It Works
+## How It Works
 
 
-###Deck-Wide Changes via @import
+### Deck-Wide Changes via @import
 
 
 
@@ -35,7 +35,7 @@ As a result of this, my notes all contain a simple <code><b>@import</b></code> c
 
 With this system, I can modify a class or ID across all note classes, rather than having to painstakingly modify each one's individual style. The only real downside is that Anki loads the CSS file only once (at startup), and any changes that are made don't appear until Anki is restarted. But even this can be negated, as any changes I'm contemplating can simply be added to the "Styling" box and tested. If it works out, then I can simply cut and paste the style code directly into my CSS file and restart.
 
-###Adding Cards
+### Adding Cards
 
 
 
@@ -64,7 +64,7 @@ The way that these notes are set up, I don't have to drag and drop images and/or
 The _ character is used so that Anki doesn't delete the media files in its unused media sweeps (which happens because the files are only being referenced, not being used directly in notes). The "EE" part simply means "Everything Else", and I did this only because I wanted to keep my language media files (for Spanish and French) separate from media files for cards in other subjects.
 
 
-###The Finished Product
+### The Finished Product
 
 
 
@@ -78,6 +78,6 @@ Below we can see the "Definition" card that is created from the note, which is, 
 <img src="img/Anki-card-answer1.jpg">
 
 
-###Scratching the Surface
+### Scratching the Surface
 
 This is a very, very basic overview of how everything in my Anki deck works. If you'd like a more in-depth view of my system, check out my book, [The Learning Factory](http://www.52aces.com/books).
